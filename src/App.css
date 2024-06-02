@@ -1,0 +1,84 @@
+:root {
+  --main-bg-color: #151515;
+  --secondary-bg-color: #343434;
+  --main-font-family: DIN, Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--main-bg-color);
+  font-family: var(--main-font-family);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--secondary-bg-color);
+  border-bottom: solid 1px rgb(69, 69, 69);
+}
+
+input {
+  box-sizing: border-box;
+  height: 2rem;
+  font-family: inherit;
+  padding: 0.5rem;
+  background-color: var(--main-bg-color);
+  color: white;
+  border: none;
+}
+
+.search-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.content-layout {
+  display: grid;
+  grid-gap: 1em;
+  padding: 1rem;
+}
+
+.select-item {
+  padding: 1rem;
+  background-color: var(--secondary-bg-color);
+  color: white;
+  cursor: pointer;
+}
+
+.item-list-layout {
+  border: solid 1px var(--secondary-bg-color);
+  display: grid;
+  color: white;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.item-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.delete-button,
+.favorite-button {
+  background: red;
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.delete-button:active,
+.favorite-button:active {
+  background-color: brown;
+  transform: translateY(4px);
+}
